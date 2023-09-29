@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:#dbe4f6;
+}
+.clock{
+    width: 500px;
+    padding: 30px;
+    background-color: rgb(241, 234, 234);
+    box-shadow: 10px 10px 50px #808080;
+    border-radius: 8px;
+
+}
+.clock .display{
+        padding: 40px 10px 10px;
+        border-radius: 8px;
+        background-color:rgb(209, 207, 207);
+        box-shadow: 0 1px 1px rgb(0, 0,0.08)inset,
+                    0 1px  1px #fafafa;
+        position: relative;
+}
+.clock .display .weekdays{
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    width: 100%;
+    top:10px;
+    left: 0px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.weekdays span{
+    padding: 0 10px;
+    opacity: 0.3;
+}
+.weekdays span.active{
+    opacity:1;
+}
+.display .timeDisplay{
+    display: flex;
+    justify-content: center;
+}
+.timeDisplay .time{
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 3px;
+    font-family:sans-serif;
+}
+.timeDisplay .format{
+    font-size: 30px;
+    margin-top: 40px;
+    margin-left: 10px;
+    font-family: sans-serif;
+}
+.time .dot{
+    animation:blinker 1s linear infinite;
+}
+@keyframes blinker {
+    25%{opacity: 0;}
+}
+
